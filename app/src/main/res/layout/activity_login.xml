@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".ui.LoginActivity">
+
+
+
+    <EditText
+        android:id="@+id/loginPhoneImput"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="250dp"
+        android:hint="Введите номер телефона"
+        android:inputType="number"
+        android:textStyle="bold"
+        tools:ignore="TextFields" />
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="350dp"
+        android:hint="Введите пароль"
+        android:inputType="textPassword"
+        android:textStyle="bold"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/password">
+
+        <CheckBox
+            android:id="@+id/remember"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="Запомнить меня"
+
+
+
+        />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Забыли пароль? "
+
+            android:textStyle="bold"
+            android:layout_marginStart="80dp"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/reg2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="Войти"
+
+        tools:ignore="DuplicateIds,MissingConstraints"
+        android:layout_marginTop="600dp" />
+    <TextView
+        android:id="@+id/adminLink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/reg2"
+        android:text="Для админа"
+        android:textStyle="bold"
+        android:layout_marginStart="300dp"/>
+    <TextView
+        android:id="@+id/notAdminLink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/reg2"
+        android:text="Для клиента"
+        android:textStyle="bold"
+        android:layout_marginStart="20dp"
+        android:visibility="invisible"/>
+
+
+
+</RelativeLayout>

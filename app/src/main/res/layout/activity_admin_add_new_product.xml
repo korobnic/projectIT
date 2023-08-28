@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.Admin.AdminAddNewProductActivity">
+    <ImageView
+        android:id="@+id/selectProductImage"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:src="@drawable/precision"
+        android:layout_marginTop="20dp"/>
+    <EditText
+        android:id="@+id/productName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/selectProductImage"
+        android:hint="Наименование товара"
+        android:padding="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:inputType="textMultiLine"
+        />
+    <EditText
+        android:id="@+id/productPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/productName"
+        android:hint="Цена товара"
+        android:padding="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:inputType="textMultiLine"
+        />
+    <EditText
+        android:id="@+id/productRating"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/productPrice"
+        android:hint="Рэйтинг товара"
+        android:padding="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:inputType="textMultiLine"
+        />
+    <Button
+        android:id="@+id/addNewProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/productRating"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
+        android:text="Добавить товар"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:textStyle="italic|bold"
+        android:padding="10dp"
+        />
+
+
+
+</RelativeLayout>

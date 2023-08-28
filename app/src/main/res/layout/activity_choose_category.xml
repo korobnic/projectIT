@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.Admin.AdminCategoryActivity">
+    <Button
+        android:id="@+id/backToHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Назад"/>
+
+    <TextView
+        android:id="@+id/chooseCategoryUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Выберите категорию"
+        android:textSize="40sp"
+        android:gravity="center"
+        android:textStyle="bold|italic"
+        android:layout_below="@+id/backToHome"/>
+    <LinearLayout
+        android:id="@+id/firstLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/chooseCategoryUser">
+
+        <TextView
+            android:id="@+id/proc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Процессоры"
+            android:textSize="30sp"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"
+            android:contextClickable="true"
+            />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/secondLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/firstLine"
+        android:layout_marginTop="20dp"
+        >
+
+        <TextView
+            android:id="@+id/videocard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Видеокарты"
+            android:textSize="30sp"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginStart="10dp"
+            android:contextClickable="true"/>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/threeLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/secondLine"
+        android:layout_marginTop="20dp"
+        >
+
+        <TextView
+            android:id="@+id/matPlat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Материнские платы"
+            android:textSize="30sp"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginStart="10dp"
+            android:contextClickable="true"/>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/fourthLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/threeLine"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/OperPam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Оперативная память"
+            android:textSize="30sp"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginStart="10dp"
+            android:contextClickable="true"/>
+
+
+    </LinearLayout>
+
+</RelativeLayout>
