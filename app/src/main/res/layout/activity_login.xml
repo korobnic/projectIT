@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
+    android:background="@drawable/fon"
     tools:context=".ui.LoginActivity">
 
 
@@ -52,10 +52,10 @@
 
 
         <TextView
+            android:id="@+id/forgetPassword"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Забыли пароль? "
-
             android:textStyle="bold"
             android:layout_marginStart="80dp"/>
     </LinearLayout>
@@ -68,7 +68,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:text="Войти"
-
+        android:background="@drawable/button1"
         tools:ignore="DuplicateIds,MissingConstraints"
         android:layout_marginTop="600dp" />
     <TextView

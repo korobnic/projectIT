@@ -2,38 +2,36 @@ package com.example.project2.ui.Users;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.Menu;
 import android.widget.ImageButton;
-import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.navigation.ui.AppBarConfiguration;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.android.volley.RequestQueue;
+import com.android.volley.toolbox.Volley;
 import com.example.project2.Model.Products;
 import com.example.project2.R;
-
-
 import com.example.project2.ViewHolders.MyAdapter;
 import com.example.project2.ui.LoginActivity;
 import com.example.project2.ui.Users.Category.ChooseCategoryActivity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
+import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBarDrawerToggle;
-import androidx.core.view.GravityCompat;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
@@ -42,10 +40,13 @@ import io.paperdb.Paper;
 public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     RecyclerView recyclerView;
+//    private RecyclerView.LayoutManager layoutManagerRecyclerView;
+//    private RecyclerViewCustomAdapter;
     DatabaseReference databaseReference;
     MyAdapter myAdapter;
     ArrayList<Products> list;
     ImageButton ProductCart;
+    private RequestQueue requestQueue;
 
     private AppBarConfiguration mAppBarConfiguration;
 
@@ -56,7 +57,10 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        ProductCart = findViewById(R.id.productCart);
+
+
+//        ActivityCompat.requestPermissions(this, new String[]{READ_MEDIA_IMAGES}, PackageManager.PERMISSION_GRANTED);
+
 
 
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -86,6 +90,9 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+//        layoutManagerRecyclerView = new LinearLayoutManager(HomeActivity.this);
+//        layoutManagerRecyclerView = new GridLayoutManager(HomeActivity.this, 2);
+//        recyclerView.setLayoutManager(layoutManagerRecyclerView);
 
         recyclerView = findViewById(R.id.recycle_menu);
         databaseReference = FirebaseDatabase.getInstance().getReference("Products");
@@ -93,8 +100,11 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         list = new ArrayList<>();
+        requestQueue = Volley.newRequestQueue(this);
         myAdapter = new MyAdapter(this, list);
         recyclerView.setAdapter(myAdapter);
+
+
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -116,11 +126,20 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
     }
 
+
+    //    public void buttonRecyclerViewUpdate(View view){
+//
+//        StorageManager storageManager = (StorageManager) getSystemService(STORAGE_SERVICE);
+//        StorageVolume storageVolume = storageManager.getStorageVolumes().get(0);
+//        File fileImage = new File()
+//    }
+
     @Override
     protected void onStart() {
         super.onStart();
 
-        
+
+
     }
 
     @Override

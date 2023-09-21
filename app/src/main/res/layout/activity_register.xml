@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.RegisterActivity">
+    tools:context=".ui.RegisterActivity"
+    android:background="@drawable/fon">
 
     <EditText
         android:id="@+id/registerPhoneImput"
@@ -12,11 +13,12 @@
         android:layout_height="100dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_marginTop="160dp"
+        android:layout_marginTop="250dp"
         android:hint="Номер телефона"
         android:inputType="number"
         android:textStyle="bold"
-        tools:ignore="TextFields" />
+        tools:ignore="TextFields"
+        android:textColor="@color/white"/>
 
     <EditText
         android:id="@+id/userNameImput"
@@ -24,7 +26,7 @@
         android:layout_height="100dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_marginTop="470dp"
+        android:layout_marginTop="450dp"
         android:hint="Имя пользователя"
         android:textStyle="bold"
         />
@@ -35,7 +37,7 @@
         android:layout_height="100dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_marginTop="290dp"
+        android:layout_marginTop="350dp"
         android:hint="Пароль"
         android:inputType="textPassword"
         android:textStyle="bold"
@@ -48,7 +50,7 @@
 
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-
+        android:background="@drawable/button1"
         android:text="Регистрация"
         tools:ignore="DuplicateIds,MissingConstraints"
         android:layout_marginTop="600dp" />

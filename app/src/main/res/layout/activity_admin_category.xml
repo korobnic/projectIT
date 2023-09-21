@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.Admin.AdminCategoryActivity">
+    tools:context=".ui.Admin.AdminCategoryActivity"
+    android:background="@drawable/fon">
 
     <TextView
         android:id="@+id/chooseCategory"
@@ -29,7 +30,8 @@
             android:textSize="30sp"
             android:clickable="true"
             android:focusable="true"
-            android:layout_marginTop="20dp"/>
+            android:layout_marginTop="20dp"
+            android:textStyle="bold"/>
 
 
     </LinearLayout>
@@ -39,7 +41,8 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_below="@+id/firstLine"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="20dp"
+        >
 
         <TextView
             android:id="@+id/videocard"
@@ -48,7 +51,8 @@
             android:text="Видеокарты"
             android:textSize="30sp"
             android:clickable="true"
-            android:focusable="true"/>
+            android:focusable="true"
+            android:textStyle="bold"/>
 
 
     </LinearLayout>
@@ -67,7 +71,8 @@
             android:text="Материнские платы"
             android:textSize="30sp"
             android:clickable="true"
-            android:focusable="true"/>
+            android:focusable="true"
+            android:textStyle="bold"/>
 
 
     </LinearLayout>
@@ -86,7 +91,8 @@
             android:text="Оперативная память"
             android:textSize="30sp"
             android:clickable="true"
-            android:focusable="true"/>
+            android:focusable="true"
+            android:textStyle="bold"/>
 
 
     </LinearLayout>

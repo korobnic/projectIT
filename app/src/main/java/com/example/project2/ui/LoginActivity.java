@@ -35,9 +35,10 @@ public class LoginActivity extends AppCompatActivity {
     private ProgressDialog loadingBar;
     private String parentDbName = "Users";
     private CheckBox checkBoxRememberMe;
-    private TextView AdminLink, NotAdminLink;
+    private TextView AdminLink, NotAdminLink, forgetPassword;
 
-    @SuppressLint("MissingInflatedId")
+
+    @SuppressLint({"MissingInflatedId", "WrongViewCast"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,7 +50,16 @@ public class LoginActivity extends AppCompatActivity {
         number = (EditText) findViewById(R.id.loginPhoneImput);
         loadingBar = new ProgressDialog(this);
         checkBoxRememberMe = findViewById(R.id.remember);
+        forgetPassword = findViewById(R.id.forgetPassword);
         Paper.init(this);
+
+        forgetPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent forgetPasswordIntent = new Intent(LoginActivity.this, RegisterActivity.class);
+                startActivity(forgetPasswordIntent);
+            }
+        });
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
