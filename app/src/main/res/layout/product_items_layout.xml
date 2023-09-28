@@ -20,14 +20,7 @@
             android:textSize="20sp"
             android:textStyle="bold"
             />
-        <ImageView
-            android:id="@+id/productImage"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_below="@+id/productName"
-            android:scaleType="centerCrop"
-            android:layout_marginTop="2dp"
-            />
+
         <TextView
             android:id="@+id/productPrice"
             android:layout_width="match_parent"
@@ -36,8 +29,8 @@
             android:textAlignment="center"
             android:textSize="20sp"
             android:textStyle="bold"
-            android:layout_below="@+id/productImage"
-            android:layout_marginStart="50dp"/>
+            android:layout_below="@+id/productName"
+            />
 
         <TextView
             android:id="@+id/productRating"
@@ -48,7 +41,17 @@
             android:textSize="20sp"
             android:textStyle="bold"
             android:layout_below="@+id/productPrice"
-            android:layout_marginStart="50dp"/>
+            />
+        <TextView
+            android:id="@+id/productShop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Product Shop"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_below="@+id/productRating"
+            />
 
     </RelativeLayout>
 

@@ -1,8 +1,6 @@
 package com.example.project2.ui;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,7 +8,11 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.project2.R;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -27,17 +29,27 @@ public class RegisterActivity extends AppCompatActivity {
     private Button register;
     private EditText userName, password, number;
     private ProgressDialog loadingBar;
+    TextView toLogin;
 
+    @SuppressLint({"WrongViewCast", "MissingInflatedId"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-
+        toLogin = findViewById(R.id.toLogin);
         register = (Button) findViewById(R.id.register);
         userName = (EditText) findViewById(R.id.userNameImput);
         password = (EditText) findViewById(R.id.registerPassword);
         number = (EditText) findViewById(R.id.registerPhoneImput);
         loadingBar = new ProgressDialog(this);
+
+        toLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent toLoginIntent = new Intent(RegisterActivity.this, LoginActivity.class);
+                startActivity(toLoginIntent);
+            }
+        });
 
         register.setOnClickListener(new View.OnClickListener() {
             @Override

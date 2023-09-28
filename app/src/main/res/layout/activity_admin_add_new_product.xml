@@ -6,17 +6,22 @@
     android:layout_height="match_parent"
     tools:context=".ui.Admin.AdminAddNewProductActivity"
     android:background="@drawable/fon">
-    <ImageView
-        android:id="@+id/selectProductImage"
+    <EditText
+        android:id="@+id/productShop"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:src="@drawable/precision"
-        android:layout_marginTop="20dp"/>
+        android:layout_height="wrap_content"
+        android:hint="Магазин"
+        android:padding="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:inputType="textMultiLine"
+        />
     <EditText
         android:id="@+id/productName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/selectProductImage"
+        android:layout_below="@+id/productShop"
         android:hint="Наименование товара"
         android:padding="20dp"
         android:layout_marginTop="5dp"

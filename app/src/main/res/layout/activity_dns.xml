@@ -4,22 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:showIn="@layout/app_bar_main">
-    <EditText
-        android:layout_width="match_parent"
+    tools:context=".ui.Users.Shops.DnsActivity"
+    android:background="@drawable/fon">
+    <Button
+        android:id="@+id/backToCategoryFromDns"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/search"
-        android:layout_alignParentEnd="true"
-        android:hint="Поиск"
+        android:text="Назад"
         />
-
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycle_menu"
+        android:id="@+id/recycle_menu_dns"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbars="vertical"
-        android:layout_below="@+id/search"
+        android:layout_below="@+id/backToCategoryFromDns"
         />
 
 </RelativeLayout>

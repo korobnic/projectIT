@@ -2,11 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:usesCleartextTraffic="true"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -14,11 +13,26 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.Project2"
+        android:usesCleartextTraffic="true"
         tools:targetApi="31">
-
+        <activity
+            android:name=".ui.Users.Shops.YandexMarketActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.Users.Shops.MvideoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.Users.Shops.CitilinkActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.Users.Shops.DnsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.Users.Shops.ChooseShopActivity"
+            android:exported="false" />
         <activity
             android:name=".ui.Users.Category.ProcActivity"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".ui.Users.Category.operPamActivity"
             android:exported="false" />
@@ -31,13 +45,11 @@
         <activity
             android:name=".ui.Users.Category.ChooseCategoryActivity"
             android:exported="false" />
-
         <activity
             android:name=".ui.Users.HomeActivity"
             android:exported="false"
             android:label="@string/title_activity_home"
-            android:theme="@style/Theme.Project2.NoActionBar"
-            />
+            android:theme="@style/Theme.Project2.NoActionBar" />
         <activity
             android:name=".ui.Admin.AdminCategoryActivity"
             android:exported="false" />

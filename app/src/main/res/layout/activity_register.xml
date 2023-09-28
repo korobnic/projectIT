@@ -30,6 +30,29 @@
         android:hint="Имя пользователя"
         android:textStyle="bold"
         />
+    <LinearLayout
+        android:id="@+id/first"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/register"
+        android:layout_marginTop="15dp"
+        >
+
+
+
+
+        <TextView
+            android:id="@+id/toLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Войти"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:clickable="true"
+            android:layout_marginStart="300dp"
+            />
+    </LinearLayout>
 
     <EditText
         android:id="@+id/registerPassword"
@@ -47,21 +70,12 @@
         android:id="@+id/register"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
+        android:layout_marginTop="600dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:background="@drawable/button1"
         android:text="Регистрация"
-        tools:ignore="DuplicateIds,MissingConstraints"
-        android:layout_marginTop="600dp" />
 
-    <ProgressBar
-        android:id="@+id/loading"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="112dp" />
+         />
 
 </RelativeLayout>

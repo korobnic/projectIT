@@ -4,7 +4,6 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -13,7 +12,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.project2.Interface.ItemClickListener;
 import com.example.project2.Model.Products;
 import com.example.project2.R;
-import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -24,15 +22,15 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     ArrayList<Products> list;
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
-        public TextView txtProductName, txtProductPrice, txtProductRating;
-        public ImageView productImage;
+        public TextView txtProductName, txtProductPrice, txtProductRating, txtProductShop;
+
         public ItemClickListener listener;
 
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            productImage = itemView.findViewById(R.id.productImage);
+            txtProductShop = itemView.findViewById(R.id.productShop);
             txtProductName = itemView.findViewById(R.id.productName);
             txtProductPrice = itemView.findViewById(R.id.productPrice);
             txtProductRating = itemView.findViewById(R.id.productRating);
@@ -63,11 +61,11 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         Products product = list.get(position);
-        String imageURL = product.getImage();
+        holder.txtProductShop.setText(product.getShop());
         holder.txtProductName.setText(product.getName());
         holder.txtProductPrice.setText(product.getPrice() + " рублей");
         holder.txtProductRating.setText(product.getRating() + " ★");
-        Picasso.get().load(imageURL).fit().centerInside().into(holder.productImage);
+
 
     }
 

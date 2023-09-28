@@ -1,13 +1,21 @@
 package com.example.project2.Model;
 
 public class Products {
-    private String name, rating, price, image, category, pid, data, time;
+    private String name, rating, price, image, category, pid, data, time, shop;
 
     public Products(){
 
     }
 
-    public Products(String name, String rating, String price, String image, String category, String pid, String data, String time) {
+    public String getShop() {
+        return shop;
+    }
+
+    public void setShop(String shop) {
+        this.shop = shop;
+    }
+
+    public Products(String name, String rating, String price, String image, String category, String pid, String data, String time, String shop) {
         this.name = name;
         this.rating = rating;
         this.price = price;
@@ -16,6 +24,7 @@ public class Products {
         this.pid = pid;
         this.data = data;
         this.time = time;
+        this.shop = shop;
     }
 
     public String getName() {
